@@ -35,8 +35,7 @@ Install packages mentioned in package.json
         - Click on accordion titles to see variables
     - Accordion to show results
     - Charts and Cards section
-- Hit /logout to log out the user
-
+    
 ## Structure of the App
 
 Source folder is divided into different sub folder based on the purpose of the files
