@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+.layout-grid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.side-nav{
+    grid-column: 1/2;
+}
+
+.main-content{
+    grid-column: 2/2;
+}
+
+.my-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #565759 transparent;
+}
+
+.my-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.my-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.my-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+}
