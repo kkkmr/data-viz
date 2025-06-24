@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# Data Viz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Flow of the App
 
-Currently, two official plugins are available:
+- Login page
+  - If not a member, create account
+- Once Logged in, page redirects to Home page
+- Structure of the App
+  - Side Nav to the left
+  - Tabs at the top
+    - By default, charging stations is selected and its corresponding panel is shown
+    - Header for panel
+      - Click on Edit Variables button to show dialog
+        - Search input and other buttons
+        - Hover on tags to show context panel
+        - Click on accordion titles to see variables
+    - Accordion to show results
+    - Charts and Cards section
+- Hit /logout to log out the user
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Structure of the App
 
-## Expanding the ESLint configuration
+Source folder is divided into different sub folder based on the purpose of the files
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- app (To store the state of the user)
+- components (Reusable elements - to be used in features and layouts)
+  - Accordion
+  - Card
+  - Line Chart
+  - RequireAuth
+  - Tabs
+  - Tag
+- features (Built section/features using components)
+  - AccordionSection - Best Scenario Results
+  - authSlice - Authorization of user
+  - cardSection - Key performance indicators
+  - Dialog - Slide overlay to edit variables
+  - DialogContent - Content to dialog to house tags and accordions
+  - SideNav - Side navigation
+  - TagSection - Tags to select/deselect varibles in Dialog
+  - TopTabs - Tabs at the top of page
+- layouts (layout of sections)
+  - Body - Layout of the panel of the first tab (Charging station)
+  - MainLayout - Maing layout of the page which placed sidenav and main content of page
+- lib
+  - firebase keys
+- pages (different pages of the App)
+  - Login page
+  - Logout page
+  - Register page
+  - error page
+- routes
+- services
