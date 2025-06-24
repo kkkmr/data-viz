@@ -91,3 +91,9 @@ Made the page responsive with break points of tailwind <768px, 768px and 1024px
 - 2 hours on first day
 - 4 hours on second day
 - 10 hours on third day
+
+## Local development instructions
+
+- Fork repo, install packages and run command
+- Register the user and login to see the home page
+
