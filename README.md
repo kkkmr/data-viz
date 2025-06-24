@@ -1,6 +1,25 @@
 # Data Viz App
 
-## Flow of the App
+## Setup instructions
+
+Install packages mentioned in package.json
+- Node and react are must
+
+## Features implemented
+
+- Side navigation 
+- Tabs with shows respective panels
+- Accordion to expand and collapse with animation
+- Chart to display line chart depending upon the data provided
+- Card section to show key performers
+- Dialog opens at left, with animation, when clicked on 'Edit variables' button
+  - Tags to show variables with selected/deselected state
+  - Context window opens when tags are hovered for more than 1.5s
+  - Accordions at bottom of dialog to display primary and secondary variables
+
+## Technical decisions and tradeoffs
+
+### Flow of the App
 
 - Login page
   - If not a member, create account
@@ -51,3 +70,24 @@ Source folder is divided into different sub folder based on the purpose of the f
   - error page
 - routes
 - services
+
+Made the page responsive with break points of tailwind <768px, 768px and 1024px
+
+### Tradeoffs
+
+- Login, logout, reigster pages were created with minimal styles as focus is on home page and its features
+- Didn't use max-height for the home page as the content in home page is less and I want to keep it dependent on content rather than forcing externally
+- Didn't optimize the app as app is already low in size. But there is option of optimizing the app by dynamic imports.
+
+## Known limitations
+
+- Chart line is not as shown in figma, as it needs more data points and other information
+- Side Nav doesn't expand when clicked on menu-icon as I am not sure whether it is requirement or not
+- Not responsive for all viewports
+- Mimicked dropdown component (with styles) on charts as designs and information is not available
+
+## Time Spent
+
+- 2 hours on first day
+- 4 hours on second day
+- 10 hours on third day
